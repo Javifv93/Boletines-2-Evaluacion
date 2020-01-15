@@ -1,0 +1,21 @@
+Ejercicio1:
+
+Apartado 1: Crear la clase Persona con los campos necesarios para representar los valores de nombre,
+apellidos, fecha de nacimiento (ver clase java.util.Date para representarla) y estatura.
+Crear tres objetos de tipo Persona (en el main) con los siguientes datos:
+Jose Rodriguez Mata, 15/01/1965, 165cm
+María Sánchez Gómez 26/12/1980, 170cm
+Alejandro Gómez Gómez, 01/11/2001, 190cm
+Jose Manuel Pérez Pons, 01/05/2010, 127cm
+
+Apartado 2: Modificar la clase con los métodos mostrarDatos, que mostrará todos los campos de un
+objeto instanciado y obtenerEdad que mostrará la edad actual de la persona instanciada.
+
+Apartado 3: Crear un nuevo constructor para la clase que reciba como parámetros el nombre, apellidos
+y la edad.
+Con este nuevo constructor crear dos objetos de tipo persona más:
+Lorena Remeseiro Neira, 12/06/2000, 160cm
+Patricia Seoane Álvarez, 23/08/1976, 175cm
+
+Apartado 4: Crear un método que recibiendo un array de Personas devuelva los datos de la persona de
+mayor edad.
