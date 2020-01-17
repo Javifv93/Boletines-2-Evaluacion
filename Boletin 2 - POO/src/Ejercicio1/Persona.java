@@ -1,31 +1,67 @@
 package Ejercicio1;
 
-import java.text.Format;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Calendar;
 
 import Ejercicio1.Persona;
-import Ejercicio1.util;
 
 public class Persona
 {
-	public String nombre;
-	public String apellidos;
-	public LocalDate fechaNacimiento=LocalDate.now();
-	public int estatura;
-	public int edad;
+	private String nombre;
+	private String apellidos;
+	private LocalDate fechaNacimiento;
+	private int estatura;
+	private int edad;
 	
+	public String getNombre()
+	{
+		return nombre;
+	}
+	public void setNombre(String nombre)
+	{
+		this.nombre=nombre;
+	}
+	public String getApellidos()
+	{
+		return apellidos;
+	}
+	public void setApellidos(String apellidos)
+	{
+		this.apellidos=apellidos;
+	}
+	public LocalDate getFechaNacimiento()
+	{
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(LocalDate fechaNacimiento)
+	{
+		this.fechaNacimiento=fechaNacimiento;
+	}
+	public int getEstatura()
+	{
+		return estatura;
+	}
+	public void setEstatura(int estatura)
+	{
+		this.estatura=estatura;
+	}
+	public int getEdad()
+	{
+		return edad;
+	}
+	public void setEdad(int edad)
+	{
+		this.edad=edad;
+	}
 	//Apartado 2
 	
-	public static void mostrarDatos(Persona p1)		
+	public void mostrarDatos()		
 	{
-			System.out.println("Nombre: "+p1.nombre);
-			System.out.println("Apellidos: "+p1.apellidos);
-			System.out.println("Fecha de Nacimiento: "+p1.fechaNacimiento);
-			System.out.println("Estatura: "+p1.estatura+"cm");
-			System.out.println("Edad: "+p1.edad);
+			System.out.println("Nombre: "+nombre);
+			System.out.println("Apellidos: "+apellidos);
+			System.out.println("Fecha de Nacimiento: "+fechaNacimiento);
+			System.out.println("Estatura: "+estatura+"cm");
+			System.out.println("Edad: "+edad);
 	}
 	public static int calcularEdad(LocalDate fechaNacimiento)
 	{
@@ -56,9 +92,9 @@ public class Persona
 	{}
 	public Persona(String nombre, String apellidos, LocalDate fechaNacimiento)	//Apartado3
 	{
-		this.nombre=nombre;
-		this.apellidos=apellidos;
-		this.edad=calcularEdad(fechaNacimiento);
+		this.setNombre(nombre);
+		this.setApellidos(apellidos);
+		this.setEdad(calcularEdad(fechaNacimiento));
 	}
 	
 	//Apartado 4
