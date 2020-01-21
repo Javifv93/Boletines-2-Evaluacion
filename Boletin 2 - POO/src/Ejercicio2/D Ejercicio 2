@@ -1,0 +1,8 @@
+Ejercicio 2:Realizar un programa que, mediante un menú, nos ofrezca calcular el área de las siguientes
+figuras:
+Área del triángulo: (base*altura)/2
+Área del cuadrado: (lado*lado)
+Área del rectángulo: (base * altura)
+Área del rombo: (diagonal mayor * diagonal menor)/2
+Crear dicho programa siguiendo la estructura de clases de la POO con una clase para cada tipo de
+objeto representado.
