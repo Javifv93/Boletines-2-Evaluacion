@@ -1,0 +1,67 @@
+Boletin 3
+Uso avanzado de clases y Objetos. Herencia, Sobreescritura y
+Polimorfismo
+Ejercicio1: Dada la siguiente estructura de clases UML:
+La visibilidad de campos y métodos se indica mediante + o – de forma que:
+• + tiene visibilidad pública
+• - tiene visibilidad privada
+Los tipos y nombre de los parámetros o campos se indican de la forma nombre : tipoDato
+Las relaciones entre clases se indican con una línea.
+Las relaciones de herencia se indican mediante un conector con la palabra Extends
+Cada elemento indicado en el diagrama se corresponde a una clase que tiene el nombre indicado en la
+parte superior del elemento. Cada uno deberá ir separado en una clase con su fichero .java
+correspondiente.
+Apartado 1: Crear la estructura de clases necesaria para representar estos datos. Los campos privados
+deberán tener los métodos set y get correspondientes para poder ser accesibles.
+Comprobar que la visibilidad de los campos de la superclase sean visibles para las clases hijas. De no
+serlo cambiar la visibilidad de forma que sean accesibles desde las clases hijas pero no desde otras
+clases (mirar apuntes).
+Apartado 2: Crear un punto de entrada de ejecución (método main) en una clase Ejercicio1 donde se
+crearán los siguientes elementos:
+1. Crear un vehículo de tipo Coche mediante su constructor.
+2. Crear un elemento de tipo Conductor y asignarlo al coche creado anteriormente.
+3. Crear un elemento de tipo Camión con un elemento de tipo Remolque pasado en la llamada del
+constructor.
+Nota: Para indicar el campo tipo utilizaremos unas constantes en Ejercicio1.java con los valores
+“COCHE” y “CAMION”, utilizándolos en la creación de los objetos. Si queréis también podéis buscar
+información sobre los Enumerados y usar uno en vez de las constantes.
+Apartado 3: Sobreescritura de métodos
+• Crear en Vehículo un método mostrarDatos que imprima por pantalla los campos propios de
+vehículo (sin contar Conductor).
+• Crear en Coche el método mostrarDatos que imprima los datos propios de Coche (no
+heredados).
+• Modificar el método mostrarDatos de Coche de forma que al principio se impriman los datos
+del vehículo (utilizando el método mostrarDatos de Vehiculo).
+• Crear un método en la clase Camion mostrarDatos que de forma similar muestre los datos del
+camión.
+Probar la ejecución del programa creando los datos y llamando al mostrarDatos (del elemento de tipo
+Coche y del elemento de tipo Camion)
+Apartado 4: Realizar desde mostrarDatos de Vehiculo y de Camion (detrás de lo ya implementado)
+una impresión por pantalla de la llamada al método toString() del objeto Conductor y Remolque.
+Probar la ejecución del programa y ver cómo salen los datos.
+Realizar en Conductor y en Remolque una sobreescritura de toString() de forma que se impriman sus
+datos.
+Probar la ejecución de nuevo.
+Apartado 4: Polimorfismo.
+Crear un método en Ejercicio1.java (impresionPolimorfismo) que recibiendo un elemento de tipo
+Vehiculo realice la llamada a mostrarDatos.
+Probar la ejecución de este elemento creando un elemento de tipo Coche y otro elemento de tipo
+Camion.
+Crear un método en Ejercicio1. Java que, recibiendo un elemento de tipo Vehículo muestre los datos
+del remolque asociado a él sólo si es de tipo camión.
+Para esto tendréis que comprobar (dentro del método si el tipo del Vehiculo pasado es “CAMION” y, si
+es así, realizar un cast dentro para poder acceder a su remolque.
+Apartado 5: Uso de super en constructores.
+1. Realizar un constructor de Vehiculo que reciba matricula, tipo y velocidadMaxima y se asocien
+esos valores en los campos de la clase.
+Al crear este constructor deberéis crear el constructor por defecto de Vehiculo.
+2. Realizar un nuevo constructor de Camion que reciba como parámetros matricula, tipo,
+velocidadMaxima y altura.
+Implementar este nuevo constructor de Camion de forma que en este costructor se asignen los
+campos propios de Camion que son recibidos en la llamada al constructor.
+3. Crear un Camion en el método main de Ejercicio1 mediante este nuevo constructor y ver qué
+datos contiene mediante una impresión por pantalla.
+4. Modificar el código del constructor creado para Camion para que realice una llamada al
+constructor de Vehiculo mediante la palabra reservada super.
+Volver a ejecutar la creación del camión mediante este constructor y mostrando los datos que
+contiene por pantalla.
