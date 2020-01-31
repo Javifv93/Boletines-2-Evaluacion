@@ -1,0 +1,48 @@
+Uso avanzado de clases y Objetos. Clases y métodos abstractos
+Ejercicio 2:
+Apartado 1: Crear una clase abstracta Figura con los siguientes datos:
+• Un campo area, privado.
+• Un método abstracto con visibilidad protected calcularArea().
+• Un método no abstracto protected imprimirArea(), que imprima por pantalla el valor del área.
+Apartado 2: Crear tres implementaciones de la clase Figura para Triangulo, Círculo y Cuadrado. Cada
+elemento tendrá dentro de su clase los campos necesarios para el cálculo del área (campos privados):
+• Círculo: Campo radio y constante PI.
+• Cuadrado: Campo lado.
+• Triángulo: Campos base y altura.
+Además, cada clase tendrá implementado tanto getters como setters para el acceso a los campos así
+como la implementación del método abstracto con el cálculo del área (que no devolverá el valor
+calculado si no que tan solo lo la asignará al campo area).
+Crear también los constructores que reciban todos los datos de las clases (los campos necesarios para el
+cálculo del área se asignarán completamente mediante los constructores).
+Apartado 3: Probar en un método main de una clase Ejercicio2 la creación de diferentes elementos de
+cada tipo y probar que funciona el cálculo de las áreas (Crear objetos, llamad al método calcularArea
+de cada objeto y después imprimid el valor del campo área directamente en el main mediante el acceso
+al método getArea()).
+Apartado 4: Crear una nueva especialización. Clase Rectangulo que extenderá la clase Cuadrado.
+Pensad la forma de implementar esa nueva clase para aprovechar al máximo lo que se obtiene de
+Cuadrado.
+Apartado 5: Crear el siguiente Array en el main de Ejercicio2.
+Figura[] arrayFiguras= {
+new Triangulo(3,2),
+new Cuadrado(5),
+new Triangulo(15,3),
+new Triangulo(8,7),
+new Rectangulo(9,5),
+new Rectangulo(15,6),
+new Circulo(5),
+new Circulo(9),
+new Rectangulo(8,3),
+new Cuadrado(9)
+};
+Crear una función que reciba el array, guarde cada elemento en un array de cada tipo de sub-Figura
+(Los cuadrados en un array de cuadrados, los triángulos en uno de triángulos, etc) y luego se recorra
+cada array mediante foreach, se calcule el área y se impriman los datos. 
+Para ello sobreescribid el método toString() en cada clase que extienda a Figura. Cada toString() de las
+clases de sub-Figuras devolverá los datos con esta estructura (Nombre de la clase y debajo los valores
+de la propia clase y de la clase Figura):
+TRIÁNGULO:
+base: 5
+altura: 12
+área: 30
+Intentad hacer uso de la polimorfia (podéis crear un procedimiento genérico que reciba un array de
+Figuras al que se le pasen luego los diferentes arrays de sub-Figuras).
