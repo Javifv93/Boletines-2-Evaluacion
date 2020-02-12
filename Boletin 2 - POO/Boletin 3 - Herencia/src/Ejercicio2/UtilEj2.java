@@ -45,8 +45,8 @@ public class UtilEj2
 			int controlSwitch=0;
 			if(x instanceof Triangulo){controlSwitch=1;}
 			if(x instanceof Cuadrado){controlSwitch=2;}
+			else if(x instanceof Rectangulo){controlSwitch=4;}
 			if(x instanceof Circulo){controlSwitch=3;}
-			if(x instanceof Rectangulo){controlSwitch=4;}
 			
 			switch(controlSwitch)
 			{

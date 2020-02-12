@@ -2,9 +2,17 @@ package Ejercicio2;
 
 public class Triangulo extends Figura
 {
+											//CAMPOS
 	private double altura;
 	private double base;
-	
+											//CONSTRUCTORES
+	public Triangulo() {}
+	public Triangulo(double altura,double base)
+	{
+		this.setAltura(altura);
+		this.setBase(base);
+	}
+											//GETTERS Y SETTERS
 	public double getAltura()
 	{
 		return altura;
@@ -21,12 +29,7 @@ public class Triangulo extends Figura
 	{
 		this.base=base;
 	}
-	public Triangulo() {}
-	public Triangulo(double altura,double base)
-	{
-		this.setAltura(altura);
-		this.setBase(base);
-	}
+											//METODOS SOBRESCRITOS
 	@Override
 	public void calcularArea() 
 	{
@@ -37,6 +40,18 @@ public class Triangulo extends Figura
 	public String toString()
 	{
 		this.calcularArea();
-		return "TRIANGULO:\r\tbase: "+this.base+"\r\taltura: "+this.altura+"\r\tarea: "+this.getArea();
+		return "\tbase: "+this.base+"\r\taltura: "+this.altura;
+	}
+											//METODOS INTERFAZ
+	public void calcularPerimetro()
+	{
+		double perimetro=base*3;
+		setPerimetro(perimetro);
+	}
+	public void imprimirDatosFigura()
+	{
+		System.out.println(this.toString());
+		this.imprimirArea();
+		this.imprimirPerimetro();
 	}
 }

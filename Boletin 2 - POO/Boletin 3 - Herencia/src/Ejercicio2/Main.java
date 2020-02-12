@@ -63,34 +63,54 @@ public class Main
 	}
 	public static void imprimirArrayTriangulo(Triangulo[] arrayTriangulos)
 	{
+		int y=0;
 		for (Triangulo x:arrayTriangulos)
 		{
 			if(x!=null)
-				System.out.println(x.toString());
+			{
+				y++;
+				System.out.println("\rTRIANGULO "+y+"\r\t");
+				x.imprimirDatosFigura();
+			}
 		}
 	}
 	public static void imprimirArrayCuadrado(Cuadrado[] arrayCuadrados)
 	{
+		int y=0;
 		for (Cuadrado x:arrayCuadrados)
 		{
 			if(x!=null)
-				System.out.println(x.toString());
+			{
+				y++;
+				System.out.println("\rCUADRADO "+y+"\t");
+				x.imprimirDatosFigura();
+			}
 		}
 	}
 	public static void imprimirArrayCirculo(Circulo[] arrayCirculos)
 	{
+		int y=0;
 		for (Circulo x:arrayCirculos)
 		{
 			if(x!=null)
-				System.out.println(x.toString());
+			{
+				y++;
+				System.out.println("\rCIRCULO "+y+"\r\t");
+				x.imprimirDatosFigura();
+			}
 		}
 	}
 	public static void imprimirArrayRectangulo(Rectangulo[] arrayRectangulos)
 	{
+		int y=0;
 		for (Rectangulo x:arrayRectangulos)
 		{
 			if(x!=null)
-				System.out.println(x.toString());
+			{
+				y++;
+				System.out.println("\rRECTANGULO "+y+"\t");
+				x.imprimirDatosFigura();
+			}
 		}
 	}
 	

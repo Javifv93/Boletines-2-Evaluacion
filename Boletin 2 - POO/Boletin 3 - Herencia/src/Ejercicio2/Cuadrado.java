@@ -2,14 +2,16 @@ package Ejercicio2;
 
 public class Cuadrado extends Rectangulo 
 {
+										//CONSTRUCTORES
 	public Cuadrado(double lado)
 	{
 		super(lado, lado);
 	}
+										//METODOS SOBRESCRITOS
 	@Override
 	public String toString()
 	{
 		this.calcularArea();
-		return "CUADRADO:\r\tlado: "+this.getBase()+"\r\tarea: "+this.getArea();
+		return "\tlado: "+this.getBase();
 	}
 }

@@ -2,9 +2,18 @@ package Ejercicio2;
 
 public class Rectangulo extends Figura
 {
+											//CAMPOS
 	private double base;
 	private double altura;
 	
+											//CONSTRUCTORES
+	public Rectangulo() {}
+	public Rectangulo(double altura,double base)
+	{
+	this.setAltura(altura);
+	this.setBase(base);
+	}
+											//GETTERS Y SETTERS
 	public double getAltura()
 	{
 		return altura;
@@ -21,12 +30,7 @@ public class Rectangulo extends Figura
 	{
 		this.base=base;
 	}
-	public Rectangulo() {}
-	public Rectangulo(double altura,double base)
-	{
-		this.setAltura(altura);
-		this.setBase(base);
-	}
+											//METODOS SOBRESCRITOS
 	@Override
 	public void calcularArea() 
 	{
@@ -37,6 +41,18 @@ public class Rectangulo extends Figura
 	public String toString()
 	{
 		this.calcularArea();
-		return "Rectangulo:\r\tbase: "+this.base+"\r\taltura: "+this.altura+"\r\tarea: "+this.getArea();
+		return "\tbase: "+this.base+"\r\taltura: "+this.altura;
+	}
+											//METODOS INTERFAZ
+	public void calcularPerimetro()
+	{
+		double perimetro=(base+altura)*2;
+		setPerimetro(perimetro);
+	}
+	public void imprimirDatosFigura()
+	{
+		System.out.println(this.toString());
+		this.imprimirArea();
+		this.imprimirPerimetro();
 	}
 }
