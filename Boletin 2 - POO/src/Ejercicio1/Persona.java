@@ -6,7 +6,7 @@ import java.util.Arrays;
 import Ejercicio1.Persona;
 
 public class Persona
-{//gguk
+{
 	private String nombre;
 	private String apellidos;
 	private LocalDate fechaNacimiento;
