@@ -6,13 +6,13 @@ import java.io.IOException;
 
 public class LecturaDeArchivos 
 {
-	/**MÈtodo y clase para la lectura de archivos de texto.
-	 * Es similar al mÈtodo de crearArchivoNuevo: Recibe la carpeta sobre la que se 
-	 * trabaja como String por par·metro, la manda al mÈtodo leerNombre de 
-	 * InteraccionesUsuario, donde se realiza la comprobaciÛn de su existencia, y luego
-	 * se imprime por pantalla en el while utilizando un FileReader. Igual que en el mÈtodo
-	 * de creaciÛn, la excepciÛn de que el archivo no se haya encontrado est· controlada
-	 * pero no deberÌa saltar nunca, ya que para eso lo pasamos por el mÈtodo leerNombre.*/
+	/**M√©todo y clase para la lectura de archivos de texto.
+	 * Es similar al m√©todo de crearArchivoNuevo: Recibe la carpeta sobre la que se 
+	 * trabaja como String por par√°metro, la manda al m√©todo leerNombre de 
+	 * InteraccionesUsuario, donde se realiza la comprobaci√≥n de su existencia, y luego
+	 * se imprime por pantalla en el while utilizando un FileReader. Igual que en el m√©todo
+	 * de creaci√≥n, la excepci√≥n de que el archivo no se haya encontrado est√° controlada
+	 * pero no deber√≠a saltar nunca, ya que para eso lo pasamos por el m√©todo leerNombre.*/
 	public static void leerArchivo(String directorio) 
 	{
 		System.out.println("Introduce el directorio del archivo a leer");
@@ -28,6 +28,7 @@ public class LecturaDeArchivos
 				{
 					System.out.print((char)bytFR);
 				}
+				leer.close();
 				System.out.println("\n");
 			}
 			catch(FileNotFoundException ArchivoNoEncontrado)
