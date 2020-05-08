@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class InteraccionesUsuario 
 {
-	/**Booleano para los menús de si o no. Excluye cualquier otra respuesta distinta
-	 * a 'y' o 'n' o tenga un tamaño distinto a 1. Devuelve true por los "y" y false
+	/**Booleano para los menÃºs de si o no. Excluye cualquier otra respuesta distinta
+	 * a 'y' o 'n' o tenga un tamaÃ±o distinto a 1. Devuelve true por los "y" y false
 	 * por los "n". */
 	public static boolean YesOrNot()
 	{
@@ -39,7 +39,7 @@ public class InteraccionesUsuario
 				}
 				else
 				{
-					System.out.println("Ha introducido un carácter erroneo\nResponda a la siguiente pregunta con "
+					System.out.println("Ha introducido un carÃ¡cter erroneo\nResponda a la siguiente pregunta con "
 							+ "\n| 'y' = Confirmar |\n\to\n| 'n' = Cancelar |");
 				}
 			}
@@ -53,7 +53,7 @@ public class InteraccionesUsuario
 		}
 		return eleccion;
 	}
-	/**Método para controlar la entrada por consola y limitarla al número de respuestas
+	/**MÃ©todo para controlar la entrada por consola y limitarla al nÃºmero de respuestas
 	 * previsto. Misma estructura que YesOrNot*/
 	public static int opcionesPrimerMenu() 
 	{
@@ -72,17 +72,17 @@ public class InteraccionesUsuario
 					(opcion!=2)
 						&&
 					(opcion!=3))
-				System.out.println("Error, Introduce un número válido");
+				System.out.println("Error, Introduce un nÃºmero vÃ¡lido");
 				else
 					control = true;
 
 			}
 			else
-				System.out.println("Error, Introduce un número válido");
+				System.out.println("Error, Introduce un nÃºmero vÃ¡lido");
 		}
 		return opcion;
 	}
-	/**Método que intenta crear un objeto FileReader en base al directorio indicado, 
+	/**MÃ©todo que intenta crear un objeto FileReader en base al directorio indicado, 
 	 * dando positivo en caso de que sea posible y por tanto que ese archivo exista,
 	 * o negativo en caso de que no.*/
 	public static boolean existeNombre(String nombre) throws FileNotFoundException, IOException
@@ -99,17 +99,17 @@ public class InteraccionesUsuario
 		}
 		finally {return existe;}
 	}
-	/**Método que recibe una String con el directorio de la carpeta. Primero se pasa
+	/**MÃ©todo que recibe una String con el directorio de la carpeta. Primero se pasa
 	 * por tres filtros: En el primero se pide un nombre para el archivo y se comprueba
-	 * que tenga un tamaño mayor que 0, por lo tanto que no se pulse intro directamente.
-	 * En el segundo, en caso de que la dirección NO acabe con "\" se le añade, con la 
-	 * intención de evitar que se concatene directamente el nombre del archivo al de la
+	 * que tenga un tamaÃ±o mayor que 0, por lo tanto que no se pulse intro directamente.
+	 * En el segundo, en caso de que la direcciÃ³n NO acabe con "\" se le aÃ±ade, con la 
+	 * intenciÃ³n de evitar que se concatene directamente el nombre del archivo al de la
 	 * carpeta.
-	 * El tercer filtro le añade la extensión .txt para que sea un archivo de texto en 
+	 * El tercer filtro le aÃ±ade la extensiÃ³n .txt para que sea un archivo de texto en 
 	 * caso de que el usuario no se la haya puesto previamente.
-	 * Tras estos filtros, se pasa por el método existeNombre para comprobar que no existe
-	 * ningún archivo con ese nombre, y en caso de que así sea se devuelve por String
-	 * la dirección de la carpeta con el nombre añadido a CreacionDeArchivos para que
+	 * Tras estos filtros, se pasa por el mÃ©todo existeNombre para comprobar que no existe
+	 * ningÃºn archivo con ese nombre, y en caso de que asÃ­ sea se devuelve por String
+	 * la direcciÃ³n de la carpeta con el nombre aÃ±adido a CreacionDeArchivos para que
 	 * lo cree.*/
 	public static String introducirNombre(String directorio)
 	{
@@ -120,7 +120,7 @@ public class InteraccionesUsuario
 		while(tamanhOK == false)
 		{
 			String scnnr = sc.nextLine();
-			if(scnnr.length()<1){System.out.println("Introduce mínimo un carácter");}
+			if(scnnr.length()<1){System.out.println("Introduce mÃ­nimo un carÃ¡cter");}
 			else {tamanhOK=true;preNombre = scnnr;}
 		}
 		if(directorio.endsWith("\\"))
@@ -147,9 +147,9 @@ public class InteraccionesUsuario
 		}
 		finally {return nombre;}
 	}
-	/**Método parecido a introducirNombre, ya que los dos se basan en concatenar a la
+	/**MÃ©todo parecido a introducirNombre, ya que los dos se basan en concatenar a la
 	 * String del directorio un nombre introducido por scanner pasandolo por diversos
-	 * filtros, siendo el más importante existeNombre. La mayor diferencia, es que en 
+	 * filtros, siendo el mÃ¡s importante existeNombre. La mayor diferencia, es que en 
 	 * introducirNombre se busca que existeNombre sea false y en leerNombre sea true.*/
 	public static String leerNombre(String directorio)
 	{
@@ -179,8 +179,8 @@ public class InteraccionesUsuario
 		}
 		finally {return nombre;}
 	}
-	/**Método estilo YesOrNot o opcionesPrimerMenu para limitar la entrada de datos
-	 * del usuario a los dos números requeridos.*/
+	/**MÃ©todo estilo YesOrNot o opcionesPrimerMenu para limitar la entrada de datos
+	 * del usuario a los dos nÃºmeros requeridos.*/
 	public static int opcionesEscritura() 
 	{
 		int opcion=0;
@@ -194,12 +194,12 @@ public class InteraccionesUsuario
 				if ((opcion!=1)
 						&&
 					(opcion!=2))
-				System.out.println("Error, Introduce un número válido");
+				System.out.println("Error, Introduce un nÃºmero vÃ¡lido");
 				else
 					control = true;
 			}
 			else
-				System.out.println("Error, Introduce un número válido");
+				System.out.println("Error, Introduce un nÃºmero vÃ¡lido");
 		}
 		return opcion;
 	}
@@ -211,11 +211,11 @@ public class InteraccionesUsuario
 		String entrada = sc.nextLine();
 		return entrada;
 	}
-	/**Este método sirve para crear una carpeta nueva sobre la que trabajaremos más
-	 * adelante, de forma que luego, concatenando la dirección de esta carpeta al nombre
-	 * de los archivos creados podamos seleccionarlos por medio del menú de forma más
-	 * simple, sin tener que introducir manualmente la ubicación completa de estos.
-	 * En este método utilizo el tipo File, ya que lo necesitaba para acceder al método
+	/**Este mÃ©todo sirve para crear una carpeta nueva sobre la que trabajaremos mÃ¡s
+	 * adelante, de forma que luego, concatenando la direcciÃ³n de esta carpeta al nombre
+	 * de los archivos creados podamos seleccionarlos por medio del menÃº de forma mÃ¡s
+	 * simple, sin tener que introducir manualmente la ubicaciÃ³n completa de estos.
+	 * En este mÃ©todo utilizo el tipo File, ya que lo necesitaba para acceder al mÃ©todo
 	 * mkdir para crear un directorio.*/
 	public static String crearDirectorio()
 	{
@@ -239,7 +239,7 @@ public class InteraccionesUsuario
 			}
 			catch(NullPointerException errorEnCreacionDeFile)
 			{
-				System.out.println("Error de argumentación en la creación de File.");
+				System.out.println("Error de argumentaciÃ³n en la creaciÃ³n de File.");
 				errorEnCreacionDeFile.printStackTrace();
 			}
 			catch (SecurityException errorMkdir) 
@@ -251,3 +251,4 @@ public class InteraccionesUsuario
 		return directorio;
 	}
 }
+
