@@ -8,20 +8,20 @@ import java.io.IOException;
 
 public class EscrituraArchivos 
 {
-	/**Este mÈtodo tiene dos partes diferenciadas: 
+	/**Este m√©todo tiene dos partes diferenciadas: 
 	 * La primera, similar a leerArchivos,
 	 * utiliza leerNombre para comprobar la existencia del archivo y luego muestra por pantalla
 	 * su contenido.
-	 * La segunda, aÒade un men˙ en el que se da la opciÛn de sobreescribir el archivo, 
-	 * de forma que se borrar· lo anteriormente escrito y se guardar· el nuevo texto, o
-	 * escribir a continuaciÛn, de forma que se concatenar·n ambos textos separados con un 
+	 * La segunda, a√±ade un men√∫ en el que se da la opci√≥n de sobreescribir el archivo, 
+	 * de forma que se borrar√° lo anteriormente escrito y se guardar√° el nuevo texto, o
+	 * escribir a continuaci√≥n, de forma que se concatenar√°n ambos textos separados con un 
 	 * espacio.
-	 * Tanto una opciÛn como la otra puede ser usada para escribir por primera vez, teniendo
-	 * en cuenta que en el caso de escribir a continuaciÛn comenzar· con un espacio.
-	 * El mÈtodo sobrescribir puede usarse para simplemente borrar el contenido pulsando intro
+	 * Tanto una opci√≥n como la otra puede ser usada para escribir por primera vez, teniendo
+	 * en cuenta que en el caso de escribir a continuaci√≥n comenzar√° con un espacio.
+	 * El m√©todo sobrescribir puede usarse para simplemente borrar el contenido pulsando intro
 	 * en vez de introduciendo un nuevo texto, pero tampoco quise controlarlo por que entiendo
 	 * que en este caso, estamos dando libertad al usuario para que escriba lo que quiera en
-	 * el archivo, no teniendo pues sentido limitar el n˙mero de car·cteres mÌnimos en tal caso.*/
+	 * el archivo, no teniendo pues sentido limitar el n√∫mero de car√°cteres m√≠nimos en tal caso.*/
 	public static void escribirArchivo(String directorio)
 	{
 		System.out.println("Introduce el nombre del archivo a modificar");
@@ -38,6 +38,7 @@ public class EscrituraArchivos
 				{
 					System.out.print((char)bytFR);
 				}
+				leer.close();
 				System.out.println("\n");
 				comprobador = true;
 			}
@@ -54,9 +55,9 @@ public class EscrituraArchivos
 			{System.out.println("Error de lectura");}
 			if (comprobador = true)
 			{
-				System.out.println("Quieres escribir a continuaciÛn o sobreescribirlo?"
-						+ "Pulse el n˙mero asociado a la operaciÛn que desee hacer:\n\t"
-						+ "1 - Escribir a continuaciÛn\n\t"
+				System.out.println("Quieres escribir a continuaci√≥n o sobreescribirlo?"
+						+ "Pulse el n√∫mero asociado a la operaci√≥n que desee hacer:\n\t"
+						+ "1 - Escribir a continuaci√≥n\n\t"
 						+ "2 - Sobreescribir\n\t");
 				int opcion = InteraccionesUsuario.opcionesEscritura();
 				switch (opcion)
@@ -69,7 +70,7 @@ public class EscrituraArchivos
 							String entrada = InteraccionesUsuario.entradaEscritura();
 							escribir.write(entrada);
 							escribir.close();
-							System.out.println("El archivo ha sido sobreescrito con Èxito\n");
+							System.out.println("El archivo ha sido sobreescrito con √©xito\n");
 						}
 						catch(IOException ioe) 
 						{System.out.println("Error");ioe.printStackTrace();}
@@ -88,8 +89,9 @@ public class EscrituraArchivos
 							}
 							FileWriter escribir = new FileWriter(nombre);
 							escribir.write(textoAntiguo.concat(" "+entrada));
+							lector.close();
 							escribir.close();
-							System.out.println("El texto ha sido aÒadido con Èxito\n");
+							System.out.println("El texto ha sido a√±adido con √©xito\n");
 						}
 						catch(IOException ioe) 
 						{System.out.println("Error");ioe.printStackTrace();}
